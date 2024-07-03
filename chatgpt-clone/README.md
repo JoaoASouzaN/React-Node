@@ -7,8 +7,11 @@ Ao colocar o servidor em execução, iniciar a aplicação web e tentar enviar a
 Em teoria, o servidor node, deveria ficar observando a porta 5555 ou 3000 e a aplicação web enviaria as requisições para uma dessas respectivas portas. Mesmo fazendo algumas alterações no codigo, em buusca de uma resolução, no entnato até o momento não consegui resolver.
 
 ERROR
+
 Network Error
+
 AxiosError: Network Error
+
     at XMLHttpRequest.handleError (http://localhost:3001/static/js/bundle.js:42375:14)
     at Axios.request (http://localhost:3001/static/js/bundle.js:42813:41)
     at async makeRequest (http://localhost:3001/static/js/bundle.js:179:7)
