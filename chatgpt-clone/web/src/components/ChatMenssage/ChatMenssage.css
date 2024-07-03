@@ -1,0 +1,20 @@
+.chat-message.chatgpt{
+    background-color: #444654;          
+}/*classe chat-message usando o chatgpt como propriedade. O background da mensagem é definido*/
+
+.chat-message-center{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    padding: 12px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+}/* configurando o bloco da mensagem margin esq e dir auto, display flex e padding para não ficar muito na borda*/
+
+.message{
+    padding-left: 40px;
+    padding-right: 40px;
+}/*Padding para desgrudar a resposta da borda*/
