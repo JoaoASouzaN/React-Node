@@ -1,4 +1,6 @@
 const app = require("./app")                    // importa as configuracoes do app
+
+require("dotenv").config()
 const port = process.env.PORT || 3000           // porta de acesso
 
 app.listen(port, ()=> {
