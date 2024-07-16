@@ -2,24 +2,23 @@ const inputPrompt = require("../models/input-prompt")
 const openai = require("../config/openia")
 
 module.exports = {
-    async sendText(req, res){
-        const openaiAPI = openai.configuration()
-        const inputModel = new inputPrompt(req.body)
-
+    async sendText(req, res){    
         try{
-            const response = await openaiAPI.createCompleation(
-                openai.textCompletion(inputModel)
-            )
+            const openaiAPI = openai.configuration()
+            const inputModel = new inputPrompt(req.body.prompt)    
+            const response = await openaiAPI.completions.create(openai.textCompletion(inputModel.prompt)).asResponse();
+            const jsonResponse = await response.json()
             return res.status(200).json({
                 sucess:true,
-                data: response.data.choices[0].text
+                data: jsonResponse.choices[0].text
             })
         }
-        catch(erro){
-            return res,status(400).json({
-            sucess: false,
-            error: error.response ? error.response.data : "there was an inssue on the server"
-        })
+        catch(error){
+            console.log(error)
+            return res.status(error.status).json({
+                sucess: false,
+                error: error.error?.message || "there was an inssue on the server"
+            })
         }
     }
 }

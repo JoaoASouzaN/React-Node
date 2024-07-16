@@ -1,17 +1,14 @@
-//import OpenAI from "openai";
-
-const { Configuration, OpenAIApi } = require("openai");
+const { Configuration, OpenAIApi, OpenAI } = require("openai");
 
 module.exports = class openai{
 
     static configuration(){
-        const openai = new OpenAI({
+        return new OpenAI({
             apiKey: process.env.OPENAI_API_KEY,
         });
-        return new OpenAIApi(configuration)
     }
     
-    static textComplition({prompt}){
+    static textCompletion(prompt){
         return{
             model: "gpt-3.5-turbo-instruct",
             prompt: `${prompt}`,

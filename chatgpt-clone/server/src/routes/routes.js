@@ -1,8 +1,5 @@
-const express = require("exprress")
-const proptController = require("../controllers/prompt-controller")
+const proptController = require("../controllers/propt-controller")
 
-const routes = express.Router()
-
-routes.post('api/prompt', proptController.sendText)
-
-module.exports = routes
+module.exports = (app) => {
+    app.post('/api/prompt', proptController.sendText)
+}
