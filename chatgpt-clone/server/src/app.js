@@ -7,7 +7,6 @@ require("dotenv").config() // chama o dotenv usando o metodo config
 
 const app = express()
 
-// app.use(express.json()) // os retornos vão ser em .json
 app.use(bodyParser.json())
 app.use(cors())
 routes(app)
