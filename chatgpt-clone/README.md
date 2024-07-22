@@ -20,3 +20,8 @@ AxiosError: Network Error
     at async handleSubmit (http://localhost:3001/static/js/bundle.js:45:20)
 
 ```
+O erro foi resolvido pelo <a href="Matheus Sabino">https://github.com/matheusdsb</a>, agradeço muito pela ajuda.
+
+Um dos problemas estava relacionado ao comando npm install, o qual, me lembro de ter executado no server, mas não no app. As portas utilizadas tambem entraram em conflito pois estava tentando executar as duas partes na mesma.
+
+Mais uma vez, obrigado Matheus pela ajuda. ✌😎
